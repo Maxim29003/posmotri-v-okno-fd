@@ -55,6 +55,7 @@ ol {
   flex-direction: column;
   grid-area: result;
   gap: 16px;
+  padding-top: 78px;
 }
 
 .result__video-container {
@@ -67,6 +68,7 @@ ol {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position:center;
 }
 
 .search-form {
@@ -93,6 +95,8 @@ ol {
   display: flex;
   gap: 5px;
   width: fit-content;
+  justify-content: center;
+  align-items: center;
 }
 
 .search-form__label:hover .search-form__label-text {
@@ -219,25 +223,31 @@ ol {
   flex-direction: column;
   gap: 30px;
   max-height: 298px;
-  padding: 2px;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   cursor: none;
 }
 
-.custom-scrollbar::-webkit-scrollbar {
+.content__list::-webkit-scrollbar {
   width: 4px;
 }
 
-.custom-scrollbar::-webkit-scrollbar-track {
+.content__list::-webkit-scrollbar-track {
   background: rgb(217 217 217 / 10%);
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb {
+.content__list::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
 }
 
-.content__list-item {
+.content__list-item{
   cursor: pointer;
+  padding-left: 2px;
+  padding-right: 3px;
+}
+
+.content__list-item:first-of-type{
+  margin-top: 2px;
 }
 
 .content__card-link {
@@ -258,6 +268,10 @@ ol {
   text-decoration: underline;
 }
 
+.content__card-link:active {
+  background-color: #545050;
+}
+
 .content__card-link_current {
   background-color: #545050;
 }
@@ -271,7 +285,7 @@ ol {
 }
 
 .content__video-card-title {
-  max-width: 196px;
+  max-width: 195px;
   overflow: hidden;
   color: #fff;
   font-family: 'Oswald', sans-serif;
@@ -284,7 +298,7 @@ ol {
 }
 
 .content__video-card-description {
-  max-width: 196px;
+  max-width: 195px;
   font-weight: 400;
   line-height: 24.2px;
 }
@@ -292,7 +306,6 @@ ol {
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
-  margin-right: 6px;
   object-fit: cover;
   object-position: center;
 }
@@ -300,4 +313,5 @@ ol {
 .more-button {
   padding: 6px 142px;
   white-space: nowrap;
+  margin: 2px 3px 2px 2px;
 }
