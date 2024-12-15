@@ -240,13 +240,13 @@ ol {
   background-color: #D9D9D9;
 }
 
-.content__list-item{
+.content__list-item {
   cursor: pointer;
   padding-left: 2px;
   padding-right: 3px;
 }
 
-.content__list-item:first-of-type{
+.content__list-item:first-of-type {
   margin-top: 2px;
 }
 
